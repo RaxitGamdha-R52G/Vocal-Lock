@@ -1,7 +1,7 @@
 🔒 Vocal-Lock: Voice-Activated AppLocker
 ========================================
 
-> **Your voice · your keys · your device.**
+> **Your Voice · Your Keys · Your Device.**
 
 Vocal-Lock is a privacy-first, offline-only Android application security vault. Instead of relying purely on easily compromised PINs or patterns, Vocal-Lock leverages on-device voice recognition and advanced Android system services to secure your sensitive applications.
 
@@ -102,8 +102,6 @@ To build a bulletproof AppLocker, Vocal-Lock requires deep, explicit system acce
 
 ### Installation
 
-Bash
-
 1.  Clone the repository
     ```bash
     git clone https://github.com/RaxitGamdha-R52G/Vocal-Lock.git
@@ -119,7 +117,7 @@ Bash
 🛣 Roadmap
 ----------
 
-**v1.0.0 (Current Baseline)**
+**v0.1.0 (Current Baseline)**
 
 *   \[x\] Core Accessibility Watchdog & UsageStats monitor
     
@@ -128,12 +126,6 @@ Bash
 *   \[x\] Advanced Drag-and-drop Group Management
     
 *   \[x\] Proto DataStore Settings & System Nudges
-    
-
-**v2.0.0 (Upcoming)**
-
-*   \[ \] **Strict Mode (Biometric Identity):** Implementation of raw MFCC (Mel-frequency cepstral coefficients) mathematical biometric matching. Instead of relying solely on the Android Speech Engine to verify _what_ words were spoken, Vocal-Lock will verify the exact _speaker identity_ based on vocal tract frequencies, calculating cosine similarity locally.
-    
 
 🤝 Contributing & CI/CD
 -----------------------
