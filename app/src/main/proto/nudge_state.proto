@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "com.vocallock.data.datastore.proto";
+option java_multiple_files = true;
+message AppNudgeEntry {
+  int32 usage_count = 1;
+  bool snoozed = 2;
+  int64 session_start_millis = 3;
+}
+message NudgeStatePrefs {
+  map<string, AppNudgeEntry> app_states = 1;
+}

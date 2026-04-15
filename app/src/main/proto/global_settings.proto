@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.vocallock.data.datastore.proto";
+option java_multiple_files = true;
+
+message GlobalSettingsPrefs {
+  int32 max_grid_tiles = 1;
+  int32 nudge_threshold = 2;
+}

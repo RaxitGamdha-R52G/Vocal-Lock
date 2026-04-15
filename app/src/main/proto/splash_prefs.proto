@@ -1,0 +1,7 @@
+syntax = "proto3";
+option java_package = "com.vocallock.data.datastore.proto";
+option java_multiple_files = true;
+message SplashPrefs {
+  int32 last_index_a = 1;
+  int32 last_index_b = 2;
+}

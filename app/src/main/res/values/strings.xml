@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vocal-Lock</string>
+    <string name="accessibility_service_label">Vocal-Lock voice autofill</string>
+    <string name="accessibility_service_description">Vocal-Lock uses accessibility to detect when a protected app is on screen, then types your saved password when your voice key is recognised. No keystrokes, screen content, or personal data are sent anywhere. Everything runs fully on-device.</string>
+    <string name="accessibility_service_summary">Autofill passwords using your voice — fully on-device.</string>
+
+    <string name="privacy_msg_1">Your passwords never leave this device. Not to us, not to anyone.</string>
+    <string name="privacy_msg_2">We built this app so even we can\'t see your data. That was the whole point.</string>
+    <string name="privacy_msg_3">No account. No server. No one waiting on the other end.</string>
+    <string name="privacy_msg_4">Everything is locked with keys that only your device holds.</string>
+    <string name="privacy_msg_5">Your voice unlocks your apps. Your data never touches a cloud.</string>
+    <string name="privacy_msg_6">The app owner has zero access to your passwords. By design, not by promise.</string>
+    <string name="privacy_msg_7">Encrypted on your phone. Decrypted on your phone. Nowhere else, ever.</string>
+    <string name="privacy_msg_8">Privacy isn\'t a feature here. It\'s the reason this app exists.</string>
+    <string name="privacy_msg_9">Not stored with us. Not backed up online. Yours, completely.</string>
+    <string name="privacy_msg_10">Even if someone asked us for your passwords, we\'d have nothing to give them.</string>
+</resources>

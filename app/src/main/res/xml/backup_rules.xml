@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude
+        domain="database"
+        path="vocal_lock.db" />
+    <exclude
+        domain="database"
+        path="vocal_lock.db-shm" />
+    <exclude
+        domain="database"
+        path="vocal_lock.db-wal" />
+    <exclude
+        domain="file"
+        path="datastore/" />
+    <exclude
+        domain="sharedpref"
+        path="." />
+</full-backup-content>
