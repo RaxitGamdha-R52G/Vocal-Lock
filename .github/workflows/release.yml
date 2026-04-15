@@ -1,0 +1,53 @@
+name: Automated Android Release
+
+# run script on main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 1. Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 2. Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: 3. Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: 4. Calculate Version (Conventional Commits)
+        id: versioning
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          default_bump: minor
+          release_branches: main
+
+      - name: 5. Build Android APK
+        env:
+          VERSION_NAME: ${{ steps.versioning.outputs.new_tag }}
+          VERSION_CODE: ${{ github.run_number }}
+        run: ./gradlew assembleDebug
+
+      - name: 6. Rename APK
+        run: mv app/build/outputs/apk/debug/app-debug.apk Vocal-Lock-${{ steps.versioning.outputs.new_tag }}.apk
+
+      - name: 7. Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.versioning.outputs.new_tag }}
+          name: Vocal-Lock ${{ steps.versioning.outputs.new_tag }}
+          generate_release_notes: true
+          files: Vocal-Lock-${{ steps.versioning.outputs.new_tag }}.apk
